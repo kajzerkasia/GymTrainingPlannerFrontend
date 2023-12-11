@@ -12,9 +12,9 @@ const AddPlan = () => {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center w-full">
-        <form onSubmit={handleSubmit} className="w-2/5 bg-violet mt-8 p-4 rounded-lg">
-            <h2 className="text-2xl m-4 font-header text-text-color">Dodaj nowy plan</h2>
+        <div className="form-container">
+        <form onSubmit={handleSubmit} className="form">
+            <h2 className="text-2xl font-header text-text-color">Dodaj nowy plan</h2>
             <div>
                 <Input
                     label="Nazwa planu"
