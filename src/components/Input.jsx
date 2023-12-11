@@ -3,7 +3,7 @@ import React from 'react';
 const Input = ({ label, id, ...props}) => {
     return (
         <div className="flex flex-col items-center w-full">
-            <label htmlFor={id} className="mb-2">{label}</label>
+            <label htmlFor={id} className="mb-2 mt-4">{label}</label>
             <input
                 id={id}
                 required

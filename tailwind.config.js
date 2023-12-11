@@ -12,7 +12,7 @@ export default {
             },
             colors: {
                 'violet': '#57486a',
-                'text-color': '#f0edf3',
+                'text-color': '#f0ebf6',
                 'input-color': '#bcaece'
             }
         },

@@ -15,3 +15,12 @@ html {
     color: #ded3ea;
 }
 
+@layer components {
+    .form {
+        @apply w-2/5 bg-violet mt-8 p-8 rounded-lg shadow-[0px_0px_1px_1px_rgba(0,0,0,0.5)] shadow-black;
+    }
+
+    .form-container {
+        @apply flex flex-col justify-center items-center w-full;
+    }
+}
