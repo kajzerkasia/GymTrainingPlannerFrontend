@@ -8,7 +8,7 @@ const Input = ({ label, id, ...props}) => {
                 id={id}
                 required
                 {...props}
-                className="bg-input-color w-4/6 rounded py-2 px-4 text-violet"
+                className="bg-input-color w-5/6 rounded py-2 px-4 text-violet"
             />
         </div>
     );
