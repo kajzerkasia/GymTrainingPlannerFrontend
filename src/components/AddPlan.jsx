@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from "./Input.jsx";
+import Button from "./UI/Button.jsx";
 
 const AddPlan = () => {
     return (
@@ -14,8 +15,8 @@ const AddPlan = () => {
                 />
             </div>
             <p className="form-actions">
-                <button>Zresetuj</button>
-                <button>Dodaj</button>
+                <Button>Zresetuj</Button>
+                <Button>Dodaj</Button>
             </p>
         </form>
     );
