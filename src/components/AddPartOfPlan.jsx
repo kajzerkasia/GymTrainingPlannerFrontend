@@ -18,7 +18,7 @@ const AddPartOfPlan = () => {
 
                 <div className="flex flex-col items-center w-full">
                     <label htmlFor="phone" className="mb-2">Wybierz plan</label>
-                    <select id="plan" name="plan" required className="bg-input-color w-4/6 rounded py-2 px-4 text-violet">
+                    <select id="plan" name="plan" required className="bg-input-color w-5/6 rounded py-2 px-4 text-violet">
                         <option value="plan-kasi">Plan Kasi</option>
                         <option value="plan-kuby">Plan Kuby</option>
                         <option value="plan-damiana">Plan Damiana</option>
