@@ -6,6 +6,7 @@ const Input = ({ label, id, ...props}) => {
             <label htmlFor={id}>{label}</label>
             <input
                 id={id}
+                required
                 {...props}
             />
         </div>
