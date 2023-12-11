@@ -3,8 +3,16 @@ import Input from "./Input.jsx";
 import Button from "./UI/Button.jsx";
 
 const AddPlan = () => {
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const fd = new FormData(event.target);
+        const data = Object.fromEntries(fd.entries());
+        console.log(data);
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2>Dodaj nowy plan</h2>
             <div>
                 <Input
@@ -15,8 +23,8 @@ const AddPlan = () => {
                 />
             </div>
             <p className="form-actions">
-                <Button>Zresetuj</Button>
-                <Button>Dodaj</Button>
+                <Button type="reset">Zresetuj</Button>
+                <Button type="submit">Dodaj</Button>
             </p>
         </form>
     );
