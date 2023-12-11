@@ -2,12 +2,13 @@ import React from 'react';
 
 const Input = ({ label, id, ...props}) => {
     return (
-        <div>
-            <label htmlFor={id}>{label}</label>
+        <div className="flex flex-col items-center w-full">
+            <label htmlFor={id} className="mb-2">{label}</label>
             <input
                 id={id}
                 required
                 {...props}
+                className="bg-input-color w-4/6 rounded py-2 px-4 text-violet"
             />
         </div>
     );
