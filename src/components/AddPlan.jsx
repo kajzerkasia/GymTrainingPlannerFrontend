@@ -12,8 +12,9 @@ const AddPlan = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Dodaj nowy plan</h2>
+        <div className="flex flex-col justify-center items-center w-full">
+        <form onSubmit={handleSubmit} className="w-2/5 bg-violet mt-8 p-4 rounded-lg">
+            <h2 className="text-2xl m-4 font-header text-text-color">Dodaj nowy plan</h2>
             <div>
                 <Input
                     label="Nazwa planu"
@@ -22,11 +23,12 @@ const AddPlan = () => {
                     name="plan"
                 />
             </div>
-            <p className="form-actions">
+            <p className="flex justify-center mt-4 space-x-4">
                 <Button type="reset">Zresetuj</Button>
                 <Button type="submit">Dodaj</Button>
             </p>
         </form>
+        </div>
     );
 };
 
