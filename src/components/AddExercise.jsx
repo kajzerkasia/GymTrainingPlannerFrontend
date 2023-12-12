@@ -1,15 +1,9 @@
 import React from 'react';
 import Input from "./Input.jsx";
 import Button from "./UI/Button.jsx";
+import {handleSubmit} from "../utils/submitForm.js";
 
 const AddExercise = () => {
-    function handleSubmit(event) {
-        event.preventDefault();
-
-        const fd = new FormData(event.target);
-        const data = Object.fromEntries(fd.entries());
-        console.log(data);
-    }
 
     return (
         <div className="form-container">
