@@ -2,14 +2,11 @@ import React from 'react';
 import Input from "./Input.jsx";
 import Button from "./UI/Button.jsx";
 import {handleSubmit} from "../utils/submitForm.js";
-import {useSelector} from "react-redux";
 
 const AddExercise = () => {
-    const selectedForm = useSelector((state) => state.form.selectedForm);
 
     return (
         <div className="form-container">
-            {selectedForm === "addExercise" && (
                 <form onSubmit={handleSubmit} className="form">
                     <h2 className="text-2xl font-header text-text-color">Dodaj nowe ćwiczenie</h2>
 
@@ -69,7 +66,6 @@ const AddExercise = () => {
                         <Button type="submit">Dodaj</Button>
                     </p>
                 </form>
-            )}
         </div>
     );
 };

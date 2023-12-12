@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import formReducer from "./form";
+import viewReducer from "./view";
 
 const store = configureStore({
     reducer: {
-        form: formReducer,
+        view: viewReducer,
     }
 });
 
