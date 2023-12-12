@@ -21,7 +21,7 @@ html {
     }
 
     .form-container {
-        @apply flex flex-col justify-center items-center w-full;
+        @apply flex flex-col justify-center items-end w-full;
     }
 
     .tr-spacing {

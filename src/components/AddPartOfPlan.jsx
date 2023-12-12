@@ -2,14 +2,11 @@ import React from 'react';
 import Input from "./Input.jsx";
 import Button from "./UI/Button.jsx";
 import {handleSubmit} from "../utils/submitForm.js";
-import {useSelector} from "react-redux";
 
 const AddPartOfPlan = () => {
-    const selectedForm = useSelector((state) => state.form.selectedForm);
 
     return (
         <div className="form-container">
-            {selectedForm === "addPart" && (
                 <form onSubmit={handleSubmit} className="form">
                     <h2 className="text-2xl font-header text-text-color mb-4">Dodaj nową część planu</h2>
 
@@ -35,7 +32,6 @@ const AddPartOfPlan = () => {
                         <Button type="submit">Dodaj</Button>
                     </p>
                 </form>
-            )}
         </div>
     );
 };
