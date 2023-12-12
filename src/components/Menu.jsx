@@ -1,18 +1,30 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from "./UI/Button.jsx";
-import Header from "./Header.jsx";
+import {useDispatch, useSelector} from "react-redux";
+import {formActions} from "../store/form.js";
+import AddPlan from "./AddPlan.jsx";
+import AddPartOfPlan from "./AddPartOfPlan.jsx";
+import AddExercise from "./AddExercise.jsx";
 
 const Menu = () => {
-    const [addFormIsOpen, setAddFormIsOpen] = useState(false);
+    const dispatch = useDispatch();
+    const selectedForm = useSelector(state => state.form.selectedForm);
+
+    const toggleAddForm = (formType) => {
+        dispatch(formActions.toggleForm(formType));
+    };
+
 
     return (
         <div>
-            <Header/>
-            <div className="mt-8 bg-violet">
-                <Button>Dodaj plan</Button>
-                <Button>Dodaj część planu</Button>
-                <Button>Dodaj ćwiczenie</Button>
+            <div className="mt-8 bg-violet w-full">
+                <Button onClick={() => toggleAddForm("addPlan")}>Dodaj plan</Button>
+                <Button onClick={() => toggleAddForm("addPart")}>Dodaj część planu</Button>
+                <Button onClick={() => toggleAddForm("addExercise")}>Dodaj ćwiczenie</Button>
             </div>
+            {selectedForm === "addPlan" && <AddPlan />}
+            {selectedForm === "addPart" && <AddPartOfPlan />}
+            {selectedForm === "addExercise" && <AddExercise />}
         </div>
     );
 };
