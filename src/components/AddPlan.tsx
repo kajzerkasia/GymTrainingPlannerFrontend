@@ -1,7 +1,7 @@
 import React from 'react';
-import Input from "./Input.jsx";
-import Button from "./UI/Button.jsx";
-import {handleSubmit} from "../utils/submitForm.js";
+import Input from "./Input";
+import Button from "./UI/Button.tsx";
+import {handleSubmit} from "../utils/submitForm";
 
 const AddPlan = () => {
 

@@ -1,6 +1,6 @@
 import './App.css'
-import Menu from "./components/Menu.jsx";
-import Header from "./components/Header.jsx";
+import Menu from "./components/Menu";
+import Header from "./components/Header";
 import React from "react";
 
 function App() {

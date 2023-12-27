@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from "./UI/Button.jsx";
+import Button from "./UI/Button.tsx";
 import {useDispatch, useSelector} from "react-redux";
 import {viewActions} from "../store/view.js";
-import AddPlan from "./AddPlan.jsx";
-import AddPartOfPlan from "./AddPartOfPlan.jsx";
-import AddExercise from "./AddExercise.jsx";
-import Plans from "./Plans.jsx";
+import AddPlan from "./AddPlan.tsx";
+import AddPartOfPlan from "./AddPartOfPlan.tsx";
+import AddExercise from "./AddExercise.tsx";
+import Plans from "./Plans";
 
 const Menu = () => {
     const dispatch = useDispatch();
