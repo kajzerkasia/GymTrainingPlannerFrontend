@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {HTMLAttributes, PropsWithChildren} from 'react';
 
-interface Props {
-    className: string;
-    children: any;
+type ButtonType = "button" | "submit" | "reset";
+
+interface Props extends HTMLAttributes<HTMLButtonElement>, PropsWithChildren {
+    type?: ButtonType;
 }
 
 const Button = ({className, children, ...props}: Props) => {

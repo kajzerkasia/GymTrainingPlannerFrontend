@@ -1,17 +1,18 @@
 import React from 'react';
-import Button from "./UI/Button.tsx";
 import {useDispatch, useSelector} from "react-redux";
 import {viewActions} from "../store/view.js";
-import AddPlan from "./AddPlan.tsx";
-import AddPartOfPlan from "./AddPartOfPlan.tsx";
-import AddExercise from "./AddExercise.tsx";
 import Plans from "./Plans";
+import Button from "./UI/Button";
+import AddPlan from "./AddPlan";
+import AddPartOfPlan from "./AddPartOfPlan";
+import AddExercise from "./AddExercise";
+import {RootState} from "../store";
 
 const Menu = () => {
     const dispatch = useDispatch();
-    const selectedView = useSelector(state => state.view.selectedView);
+    const selectedView = useSelector((state: RootState) => state.view.selectedView);
 
-    const toggleView = (view) => {
+    const toggleView = (view: string) => {
         dispatch(viewActions.toggleView(view));
     };
 

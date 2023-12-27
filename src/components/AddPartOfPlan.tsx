@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from "./Input";
-import Button from "./UI/Button.tsx";
 import {handleSubmit} from "../utils/submitForm";
+import Button from "./UI/Button";
 
 const AddPartOfPlan = () => {
 
