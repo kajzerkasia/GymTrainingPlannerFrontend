@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "./UI/Button.tsx";
+import Button from "./UI/Button";
 
 const Plans = () => {
     return (

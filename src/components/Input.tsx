@@ -1,6 +1,21 @@
-import React from 'react';
+import React, {HTMLAttributes, PropsWithChildren} from 'react';
 
-const Input = ({ label, id, ...props}) => {
+type InputType = "email"
+    | "password"
+    | "text"
+    | "number"
+    | "date"
+    | "checkbox"
+    | "radio"
+    | "file";
+
+interface Props extends HTMLAttributes<HTMLInputElement>, PropsWithChildren {
+    type?: InputType;
+    label: string;
+    name: string;
+}
+
+const Input = ({label, id, ...props}: Props) => {
     return (
         <div className="flex flex-col items-center w-full">
             <label htmlFor={id} className="mb-2 mt-4">{label}</label>
