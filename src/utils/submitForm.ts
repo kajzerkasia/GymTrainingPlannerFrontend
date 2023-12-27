@@ -1,4 +1,6 @@
-export function handleSubmit(event) {
+import {ChangeEvent} from "react";
+
+export function handleSubmit(event: ChangeEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const fd = new FormData(event.target);

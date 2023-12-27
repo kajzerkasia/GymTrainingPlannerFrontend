@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Button = ({className, children, ...props}) => {
+interface Props {
+    className: string;
+    children: any;
+}
+
+const Button = ({className, children, ...props}: Props) => {
     return (
         <button className="border py-2 px-4 rounded-lg hover:bg-input-color" {...props}>
             {children}
